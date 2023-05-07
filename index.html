@@ -25,132 +25,119 @@
       }
     body {
       width: 100%;
-      height: 100vh;
-      background-color: rgb(32, 32, 32);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .container {
-      background-color: var(--pale-blue);
-      width: 375px;
-      height: min-content;
-      margin: auto;
-      text-align: center;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      /* align-items: center; */
-
+      align-items: center;
+      background-color: var(--pale-blue);
+      background-image: url(images/pattern-background-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
     }
     .main-content {
-      margin: 2em;
-      /* width: 100%;
-      height: 100%; */
-      /* margin-top: 10px; */
+      width: 28em;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       background-color: white;
-      border-radius: 15px;
+      border-radius: 20px;
       margin-top: 5em;
     }
     .illustration {
       width: 100%;
-      border-radius: 15px 15px 0 0;
-
-      /* height: 30%; */
-      /* background-image: url(illustration-hero.svg); */
+      border-radius: 20px 20px 0 0;
     }
     .headline {
       font-weight: 900;
-      font-size: 20px;
-      margin-top: 1.25em;
-      margin-bottom: 1.5em;
+      font-size: 28px;
+      margin-top: 1.625em;
       color: var(--dark-blue);
     }
     .text {
       font-size: 16px;
       font-weight: 500;
       color: var(--desaturated-blue);
+      margin-top: 1.1em ;
+      padding-right: 5em;
+      line-height: 1.6em;
     }
     .change{
       color: var(--bright-blue);
       margin-right: 20px;
-
+      background-color: var(--very-pale-blue);
     }
     .wrapper {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
       align-items: center;
       background-color: var(--very-pale-blue);
-      margin-top: 3em;
+      width: 79%;
+      margin-top: 1.3em;
+      height: 6.2em;
+      border-radius: 10px;
     }
     .music-icon {
       margin-left: 20px;
     }
-      .bold-text {
-        font-weight: 700;
-        color: var(--dark-blue);
-      }
-      .change {
-        text-decoration: underline;
-        font-size: 12px;
-        font-weight: 900;
-        border: none;
-      }
-      .proceed {
-        font-size: 16px;
-        font-weight: 700;
-        margin-top: 2.5em;
-        width: 90%;
-        height: 3.5em;
-        background-color: var(--bright-blue);
-        border-radius: 10px;
-        box-shadow: 2px 15px 10px var(--pale-blue);
-        color: white;
-      }
-      .cancel {
-        margin-top: 1.5em;
-        border: none;
-        background-color: white;
-        color: var(--desaturated-blue);
-        font-weight: 900;
-        font-size: 15px;
-        margin-bottom: 2.5em;
-      }
-      button:hover {
-        cursor: pointer;
-      }
-
+    .bold-text {
+      font-weight: 700;
+      color: var(--dark-blue);
+    }
+    .change {
+      text-decoration: underline;
+      font-size: 14px;
+      font-weight: 900;
+      border: none;
+    }
+    .proceed {
+      font-size: 16px;
+      font-weight: 700;
+      margin-top: 2em;
+      width: 90%;
+      height: 3.15em;
+      background-color: var(--bright-blue);
+      border-radius: 10px;
+      box-shadow: 0px 25px 20px var(--pale-blue);
+      color: white;
+      border: none;
+    }
+    .cancel {
+      margin-top: 2.1em;
+      border: none;
+      background-color: white;
+      color: var(--desaturated-blue);
+      font-weight: 900;
+      font-size: 15px;
+      margin-bottom: 3.1em;
+    }
+    button:hover {
+      cursor: pointer;
+    }
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-  <div class="container">
-    <main class="main-content">
-      <img class="illustration" src="/images/illustration-hero.svg" alt="dancing person listening to music">
-      <h1 class="headline">Order Summary</h1>
-      <p class="text">  You can now listen to millions of <br>songs, audiobooks, and podcasts on <br>any 
-        device anywhere you like!
-      </p>
-      <div class="wrapper">
-        <img class="music-icon" src="/images/icon-music.svg" alt="music icon">
-          <p class="text"><span class="bold-text">Annual Plan</span><br>$59.99/year</p>
-          <button class="change">Change</p>
-      </div>
-      <button class="proceed">Proceed to Payment</button>
-      <button class="cancel">Cancel Order</button>
-    </main>
+  <main class="main-content">
+    <img class="illustration" src="/images/illustration-hero.svg" alt="dancing person listening to music">
+    <h1 class="headline">Order Summary</h1>
+    <p class="text">  You can now listen to millions of songs,<br> audiobooks, and podcasts on any device<br>anywhere you like!
+    </p>
+    <div class="wrapper">
+      <img class="music-icon" src="/images/icon-music.svg" alt="music icon">
+      <p class="text"><span class="bold-text">Annual Plan</span><br>$59.99/year</p>
+      <button class="change">Change</button>
+    </div>
+    <button class="proceed">Proceed to Payment</button>
+    <button class="cancel">Cancel Order</button>
+  </main>
+  <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Reinhard</a>.
     </div>
-  </div>
+  </footer>
 </body>
 </html>
-<!-- - Mobile: 375px
-- Desktop: 1440px
-
-- Font size (paragraph): 16px
-
-- Family: [Red Hat Display](https://fonts.google.com/specimen/Red+Hat+Display)
-- Weights: 500, 700, 900 -->
